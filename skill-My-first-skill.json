@@ -1,0 +1,973 @@
+{
+  "intents": [
+    {
+      "intent": "Book_Tickets",
+      "examples": [
+        {
+          "text": "I prefer to reserve two seats"
+        },
+        {
+          "text": "I would like to book a ticket at 2:00 PM"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Greetings",
+      "examples": [
+        {
+          "text": "Good Afternoon"
+        },
+        {
+          "text": "Good Evening"
+        },
+        {
+          "text": "Good Morning"
+        },
+        {
+          "text": "Hello"
+        },
+        {
+          "text": "Hi"
+        }
+      ],
+      "description": "Normal Greetings "
+    },
+    {
+      "intent": "Inquiry",
+      "examples": [
+        {
+          "text": "Any Available offers"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Movies-Availability",
+      "examples": [
+        {
+          "text": "can you provide the Available Movies ?"
+        },
+        {
+          "text": "Please suggest some movies"
+        },
+        {
+          "text": "Which movies are available"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Thanks",
+      "examples": [
+        {
+          "text": "Ok thank you"
+        },
+        {
+          "text": "Thank u"
+        },
+        {
+          "text": "Thank You"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "Book_Tickets",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Movie",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Seats",
+          "synonyms": [
+            "bearths",
+            "seat",
+            "ticket"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Time",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "City",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "kakinada",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "visakhapatnam",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Vizayanagaram",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Greetings",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Good Afternoon",
+          "synonyms": [
+            "ga",
+            "good aftrn",
+            "gud aftn"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Good Evening",
+          "synonyms": [
+            "ge",
+            "good Even",
+            "Gud Even"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Good Morning",
+          "synonyms": [
+            "gm",
+            "good morng",
+            "gud mrg"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "hello",
+          "synonyms": [
+            "hellooo"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "hi",
+          "synonyms": [
+            "hiii"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Inquiry",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Movie_list",
+          "synonyms": [
+            "List"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Offers",
+          "synonyms": [
+            "Offer"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Movies",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Ala Vaikunthapurramuloo",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Bheeshma",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Jaanu",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Sarileru Nekevvaru Sarileru Neekevvaru",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "V (film)",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Movies-availability",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "City",
+          "synonyms": [
+            "area",
+            "areas",
+            "location",
+            "region",
+            "town"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Streaming",
+          "synonyms": [
+            "accessible",
+            "broadcast",
+            "streamed",
+            "streaming",
+            "viewable"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Suggestions",
+          "synonyms": [
+            "choice",
+            "choices",
+            "options",
+            "preferences"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Payment",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Credit card",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Debit card",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "UPI",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-date",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-number",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-time",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Thanks",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Thank you",
+          "synonyms": [
+            "ok Thank you",
+            "tq"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Time",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "2PM",
+          "synonyms": [
+            "2-00PM",
+            "2:00 PM"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "6PM",
+          "synonyms": [
+            "6-00PM",
+            "6:00 PM"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "9AM",
+          "synonyms": [
+            "9:00AM",
+            "9-AM"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_10_1603127279080",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "We accept UPI, credit and Debit cards, Select your payment mode"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_5_1603125270357",
+      "event_name": "focus",
+      "dialog_node": "handler_10_1603125270377",
+      "previous_sibling": "handler_1_1603125270377"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "title": "Movie list",
+            "options": [
+              {
+                "label": "Ala Vaikunthapurramuloo",
+                "value": {
+                  "input": {
+                    "text": "Ala Vaikunthapurramuloo"
+                  }
+                }
+              },
+              {
+                "label": "Bheeshma",
+                "value": {
+                  "input": {
+                    "text": "Bheeshma"
+                  }
+                }
+              },
+              {
+                "label": "Sarileru Nekevvaru Sarileru Neekevvaru",
+                "value": {
+                  "input": {
+                    "text": "Sarileru Nekevvaru Sarileru Neekevvaru"
+                  }
+                }
+              },
+              {
+                "label": "V (film)",
+                "value": {
+                  "input": {
+                    "text": "V (film)"
+                  }
+                }
+              },
+              {
+                "label": "Jaanu",
+                "value": {
+                  "input": {
+                    "text": ""
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "slot_4_1603124612331",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1603124612400",
+      "previous_sibling": "handler_7_1603124612400"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_5_1603125270357",
+      "context": {
+        "Payment": "@Payment"
+      },
+      "conditions": "@Payment",
+      "event_name": "input",
+      "dialog_node": "handler_1_1603125270377"
+    },
+    {
+      "type": "event_handler",
+      "parent": "node_8_1603124489383",
+      "event_name": "focus",
+      "dialog_node": "handler_2_1603124610462",
+      "previous_sibling": "node_3_1603125739441"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "How many seats do you require"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_9_1603125198263",
+      "event_name": "focus",
+      "dialog_node": "handler_3_1603125198281",
+      "previous_sibling": "handler_8_1603125198281"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Please select your time"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_10_1603124898138",
+      "event_name": "focus",
+      "dialog_node": "handler_6_1603124898155",
+      "previous_sibling": "handler_9_1603124898154"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_4_1603124612331",
+      "context": {
+        "Movies": "@Movies"
+      },
+      "conditions": "@Movies",
+      "event_name": "input",
+      "dialog_node": "handler_7_1603124612400"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_9_1603125198263",
+      "context": {
+        "number": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_8_1603125198281"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1603124898138",
+      "context": {
+        "Time": "@Time"
+      },
+      "conditions": "@Time",
+      "event_name": "input",
+      "dialog_node": "handler_9_1603124898154"
+    },
+    {
+      "type": "standard",
+      "title": "Greetings",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#Greetings || @Greetings",
+      "dialog_node": "node_10_1603114659514",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "Thanks",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thank you for using our service visit again."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "conditions": "#Thanks || @Thanks",
+      "dialog_node": "node_10_1603127279080",
+      "previous_sibling": "node_8_1603124489383"
+    },
+    {
+      "type": "standard",
+      "title": "Movies",
+      "output": {
+        "generic": [
+          {
+            "title": "Select a movie",
+            "options": [
+              {
+                "label": "V (film)",
+                "value": {
+                  "input": {
+                    "text": ""
+                  }
+                }
+              },
+              {
+                "label": "Ala Vaikunthapurramuloo",
+                "value": {
+                  "input": {
+                    "text": ""
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_4_1603120010446",
+      "conditions": "@Movies",
+      "dialog_node": "node_3_1603123198112"
+    },
+    {
+      "type": "standard",
+      "title": "Deleting context",
+      "output": {
+        "deleted": "<?context.remove('time')?><?context.remove('number')?><?context.remove('payment')?>",
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1603124489383",
+      "conditions": "true",
+      "dialog_node": "node_3_1603125739441"
+    },
+    {
+      "type": "standard",
+      "title": "Inquiry",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "10%  off on booking 3 tickets at a time"
+              },
+              {
+                "text": "10% off on UPI Payments"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "conditions": "#Inquiry && @Inquiry:Offers",
+      "dialog_node": "node_4_1603120010446",
+      "previous_sibling": "node_9_1603118785262"
+    },
+    {
+      "type": "frame",
+      "title": "Book tickets",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thank you for your booking of $number seats at $Time for $Movies. You can pay the amount using $Payment."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Book_Tickets || @Book_Tickets",
+      "dialog_node": "node_8_1603124489383",
+      "previous_sibling": "node_4_1603120010446"
+    },
+    {
+      "type": "standard",
+      "title": "Movie-Availability",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#Movies-Availability || @Movies-availability",
+      "dialog_node": "node_9_1603118785262",
+      "previous_sibling": "node_10_1603114659514"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "source": "https://2.bp.blogspot.com/-sUvp5mU5YG0/XFWlv2A_XRI/AAAAAAAAABs/_CJLM6RbXRk5kkiTfWbMHllgBsd6NSyeQCLcBGAs/s1600/two.jpg",
+            "response_type": "image"
+          }
+        ]
+      },
+      "parent": "node_9_1603118785262",
+      "conditions": "anything_else",
+      "dialog_node": "response_1_1603119753344",
+      "previous_sibling": "response_2_1603118878844"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "Visakhapatnam",
+            "options": [
+              {
+                "label": "Ala Vaikunthapurramuloo",
+                "value": {
+                  "input": {
+                    "text": "Ala Vaikunthapurramuloo"
+                  }
+                }
+              },
+              {
+                "label": "Bheeshma",
+                "value": {
+                  "input": {
+                    "text": "Bheeshma"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          },
+          {
+            "title": "Vizaganaram",
+            "options": [
+              {
+                "label": "V (film)",
+                "value": {
+                  "input": {
+                    "text": "V (film)"
+                  }
+                }
+              },
+              {
+                "label": "Sarileru Nekevvaru Sarileru Neekevvaru",
+                "value": {
+                  "input": {
+                    "text": "Sarileru Nekevvaru Sarileru Neekevvaru"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          },
+          {
+            "title": "Kakinada",
+            "options": [
+              {
+                "label": "Jaanu",
+                "value": {
+                  "input": {
+                    "text": "Jaanu"
+                  }
+                }
+              },
+              {
+                "label": "V (film)",
+                "value": {
+                  "input": {
+                    "text": "V (film)"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_9_1603118785262",
+      "conditions": "@Movies-availability:City",
+      "dialog_node": "response_2_1603118878844"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1603127279080",
+      "disabled": true,
+      "dialog_node": "response_4_1603168396999"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good Evening"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1603114659514",
+      "conditions": "@Greetings:(Good Evening)",
+      "dialog_node": "response_5_1603115205809",
+      "previous_sibling": "response_6_1603115184625"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good Afternoon"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1603114659514",
+      "conditions": "@Greetings:(Good Afternoon)",
+      "dialog_node": "response_6_1603115184625",
+      "previous_sibling": "response_7_1603114991217"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hi"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1603114659514",
+      "conditions": "@Greetings:hi",
+      "dialog_node": "response_6_1603115233775",
+      "previous_sibling": "response_5_1603115205809"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good Morning"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1603114659514",
+      "conditions": "@Greetings:(Good Morning)",
+      "dialog_node": "response_7_1603114991217"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1603114659514",
+      "conditions": "@Greetings:hello",
+      "dialog_node": "response_7_1603115243150",
+      "previous_sibling": "response_6_1603115233775"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hi"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1603114659514",
+      "conditions": "anything_else",
+      "dialog_node": "response_9_1603115299126",
+      "previous_sibling": "response_7_1603115243150"
+    },
+    {
+      "type": "slot",
+      "parent": "node_8_1603124489383",
+      "variable": "$Time",
+      "dialog_node": "slot_10_1603124898138",
+      "previous_sibling": "slot_4_1603124612331"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_8_1603124489383",
+      "variable": "$Movies",
+      "dialog_node": "slot_4_1603124612331",
+      "previous_sibling": "handler_2_1603124610462"
+    },
+    {
+      "type": "slot",
+      "parent": "node_8_1603124489383",
+      "variable": "$Payment",
+      "dialog_node": "slot_5_1603125270357",
+      "previous_sibling": "slot_9_1603125198263"
+    },
+    {
+      "type": "slot",
+      "parent": "node_8_1603124489383",
+      "variable": "$number",
+      "dialog_node": "slot_9_1603125198263",
+      "previous_sibling": "slot_10_1603124898138"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello. I am  movie ticket booking bot, I am capable of showing Movies availability,Book tickets and Inquiry.... How may help you ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "My first skill",
+  "language": "en",
+  "description": ""
+}
